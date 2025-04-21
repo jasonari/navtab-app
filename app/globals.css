@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+body {
+  user-select: none;
+}
+
+/* @utility flex-center {
+  @apply flex items-center justify-center;
+} */
