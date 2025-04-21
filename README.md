@@ -13,6 +13,12 @@
 pnpm install
 ```
 
+# Usage
+
+```
+pnpm dev
+```
+
 # License
 
 Licensed as MIT.
