@@ -22,7 +22,7 @@ const SearchBar: NextPage = () => {
         <input
           type="text"
           placeholder="输入搜索内容"
-          className="h-9 flex-1 pt-1 pb-1 text-base leading-7"
+          className="h-6 flex-1 text-base leading-6"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           onKeyDown={handleKeyDown}
