@@ -14,20 +14,20 @@ const SearchBar: NextPage = () => {
   return (
     <div className="flex flex-row justify-center pt-26">
       <label className="input input-ghost h-13 w-140 gap-0 rounded-2xl border-0 bg-white/50 p-0 focus-within:outline-none">
-        <section className="flex size-13 items-center justify-center">
-          <section className="flex size-8 items-center justify-center rounded-lg hover:cursor-pointer hover:bg-white/50">
+        <section className="flex-center size-13">
+          <section className="flex-center size-8 rounded-lg hover:cursor-pointer hover:bg-white/50">
             <img src="/icon-bing.png" alt="bing" className="size-6" />
           </section>
         </section>
         <input
           type="text"
           placeholder="输入搜索内容"
-          className="flex-1"
+          className="h-9 flex-1 pt-1 pb-1 text-base leading-7"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <section className="flex size-13 items-center justify-center">
+        <section className="flex-center size-13">
           <button
             style={{ display: searchValue ? 'block' : 'none' }}
             onClick={() => {

@@ -5,6 +5,6 @@ body {
   user-select: none;
 }
 
-/* @utility flex-center {
+@utility flex-center {
   @apply flex items-center justify-center;
-} */
+}

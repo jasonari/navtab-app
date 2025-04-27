@@ -1,7 +1,8 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import { APP_TITLE, APP_DESCRIPTION } from '@/lib/constants'
-import './globals.css'
+import '@/app/ui/globals.css'
+import { notoSansSC } from '@/app/ui/fonts'
 
 export const metadata: Metadata = {
   title: APP_TITLE,
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body>
+      <body className={`${notoSansSC.className} antialiased`}>
         <main>{children}</main>
       </body>
     </html>

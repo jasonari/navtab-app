@@ -11,7 +11,7 @@ const NavIcon: NextPage<NavIconProps> = ({ icon }) => {
       href={icon.href}
       target="_self"
       rel="noopener noreferrer"
-      className="mr-2 ml-2 flex size-[60px] items-center justify-center rounded-xl bg-[#fff]"
+      className="flex-center mr-2 ml-2 flex size-[60px] rounded-xl bg-[#fff]"
     >
       <img
         src={icon.imgUrl}
