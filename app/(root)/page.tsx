@@ -1,12 +1,16 @@
 import type { NextPage } from 'next'
 import SearchBar from '@/components/SearchBar'
 import Dock from '@/components/Dock'
+import { Suspense } from 'react'
+import DockSkeleton from '@/app/ui/skeletons'
 
-const Page: NextPage = () => {
+const Page: NextPage = async () => {
   return (
     <div>
       <SearchBar />
-      <Dock />
+      <Suspense fallback={<DockSkeleton />}>
+        <Dock />
+      </Suspense>
     </div>
   )
 }

@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  uid       String     @unique @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  username  String
+  password  String
+  bookmarks Bookmark[]
+  createdAt DateTime   @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt DateTime   @updatedAt @map("updated_at")
+  isDeleted Boolean    @default(false) @map("is_deleted")
+  isBanned  Boolean    @default(false) @map("is_banned")
+  role      Role       @default(USER)
+
+  @@map("user")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model Bookmark {
+  id      String @id
+  href    String
+  size    Int
+  title   String
+  imgUrl  String
+  bgColor String
+  user    User   @relation(fields: [userUid], references: [uid])
+  userUid String @map("user_uid") @db.Uuid
+
+  @@map("bookmark")
+}

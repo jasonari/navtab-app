@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
-import type { Icon } from '../Dock/iconListData'
+import type { Bookmark } from '@/lib/types/userData'
 
 interface NavIconProps {
-  icon: Icon
+  icon: Bookmark
 }
 
 const NavIcon: NextPage<NavIconProps> = ({ icon }) => {
