@@ -1,8 +1,6 @@
-export interface Bookmark {
+import { z } from 'zod'
+import { insertBookmarkSchema } from '@/lib/validators'
+
+export type Bookmark = z.infer<typeof insertBookmarkSchema> & {
   id: string
-  href: string
-  size: number
-  title: string
-  imgUrl: string
-  bgColor: string
 }
