@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import type { Bookmark } from '@/lib/types/userData'
+import type { Bookmark } from '@/types'
 
 interface NavIconProps {
   icon: Bookmark
