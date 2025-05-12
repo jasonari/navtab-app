@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import type { NextPage } from 'next'
+import Image from 'next/image'
 
 const SearchBar: NextPage = () => {
   const [searchValue, setSearchValue] = useState('')
@@ -16,7 +17,7 @@ const SearchBar: NextPage = () => {
       <label className="input input-ghost h-13 w-140 gap-0 rounded-2xl border-0 bg-white/50 p-0 focus-within:outline-none">
         <section className="flex-center size-13">
           <section className="flex-center size-8 rounded-lg hover:cursor-pointer hover:bg-white/50">
-            <img src="/icon-bing.png" alt="bing" className="size-6" />
+            <Image src="/icon-bing.png" alt="bing" width={24} height={24} />
           </section>
         </section>
         <input
