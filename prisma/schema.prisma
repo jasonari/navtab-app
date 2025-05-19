@@ -23,10 +23,10 @@ model User {
   email         String     @unique
   emailVerified DateTime?  @map("email_verified") @db.Timestamp(6)
   image         String?
+  role          String      @default("USER")
   bookmarks     Bookmark[]
   account       Account[]
   session       Session[]
-  role          Role       @default(USER)
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(6)
   updatedAt DateTime @updatedAt @map("updated_at")
@@ -34,11 +34,6 @@ model User {
   isBanned  Boolean  @default(false) @map("is_banned")
 
   @@map("user")
-}
-
-enum Role {
-  USER
-  ADMIN
 }
 
 model Bookmark {
