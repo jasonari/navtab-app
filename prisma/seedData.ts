@@ -1,6 +1,6 @@
 import { hashSync } from 'bcrypt-ts-edge'
 
-const data = {
+const seedData = {
   users: [
     {
       username: 'JasonAdmin',
@@ -16,7 +16,8 @@ const data = {
       size: 48,
       title: 'notion',
       imgUrl: '/icon-notion.svg',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'github',
@@ -24,7 +25,8 @@ const data = {
       size: 38,
       title: 'github',
       imgUrl: '/icon-github.com.svg',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'juejin',
@@ -32,7 +34,8 @@ const data = {
       size: 38,
       title: '掘金',
       imgUrl: '/icon-juejin.cn.svg',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'bilibili',
@@ -40,7 +43,8 @@ const data = {
       size: 48,
       title: 'bilibili',
       imgUrl: '/icon-bilibili.svg',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'agedm',
@@ -48,7 +52,8 @@ const data = {
       size: 62,
       title: 'AGE动漫',
       imgUrl: '/icon-agedm.org.ico',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'aliyun',
@@ -56,7 +61,8 @@ const data = {
       size: 32,
       title: '阿里云控制台',
       imgUrl: '/icon-aliyun.com.ico',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'baota',
@@ -64,7 +70,8 @@ const data = {
       size: 32,
       title: '宝塔面板',
       imgUrl: '/icon-bt.cn.ico',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'perplexity',
@@ -72,7 +79,8 @@ const data = {
       size: 38,
       title: 'Perplexity',
       imgUrl: '/icon-perplexity.svg',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'tongyi',
@@ -80,7 +88,8 @@ const data = {
       size: 38,
       title: '通义千问',
       imgUrl: '/icon-tongyi.png',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     },
     {
       id: 'chatgpt',
@@ -88,9 +97,10 @@ const data = {
       size: 42,
       title: 'ChatGPT',
       imgUrl: '/icon-chatgpt.svg',
-      bgColor: '#fff'
+      bgColor: '#fff',
+      userId: '7c3c4d01-14d2-4657-adcd-0a1cceb79fe7'
     }
   ]
 }
 
-export default data
+export default seedData

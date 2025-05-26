@@ -16,14 +16,13 @@ datasource db {
 }
 
 model User {
-  id            Int        @id @default(autoincrement())
-  uid           String     @unique @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  id            String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   username      String     @default("NO_NAME")
   password      String?
   email         String     @unique
   emailVerified DateTime?  @map("email_verified") @db.Timestamp(6)
   image         String?
-  role          String      @default("USER")
+  role          String     @default("USER")
   bookmarks     Bookmark[]
   account       Account[]
   session       Session[]
@@ -43,15 +42,13 @@ model Bookmark {
   title   String
   imgUrl  String
   bgColor String
-  user    User   @relation(fields: [userUid], references: [uid])
-  userUid String @map("user_uid") @db.Uuid
+  user    User   @relation(fields: [userId], references: [id])
+  userId  String @map("user_id") @db.Uuid
 
   @@map("bookmark")
 }
 
 model Account {
-  user              User    @relation(fields: [userUId], references: [uid], onDelete: Cascade)
-  userUId           String  @db.Uuid
   type              String
   provider          String
   providerAccountId String  @map("provider_account_id")
@@ -62,6 +59,8 @@ model Account {
   scope             String?
   idToken           String? @map("id_token")
   sessionState      String? @map("session_state")
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId            String  @db.Uuid
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(6)
   updatedAt DateTime @updatedAt @map("updated_at")
@@ -72,9 +71,9 @@ model Account {
 
 model Session {
   sessionToken String   @id
-  user         User     @relation(fields: [userId], references: [uid], onDelete: Cascade)
-  userId       String   @db.Uuid
   expires      DateTime @db.Timestamp(6)
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String   @db.Uuid
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(6)
   updatedAt DateTime @updatedAt @map("updated_at")
