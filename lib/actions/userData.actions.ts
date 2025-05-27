@@ -1,10 +1,11 @@
 'use server'
-import prisma from '@/db/prisma'
+import prisma from '@/prisma/prisma'
+import { USER_ID } from '@/lib/constants'
 
-export async function getBookmarksByUserUid(user_uid: string) {
+export async function getBookmarks() {
   const res = await prisma.bookmark.findMany({
     where: {
-      userUid: user_uid
+      userId: USER_ID
     }
   })
 
