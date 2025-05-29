@@ -1,13 +1,18 @@
-import { NextPage } from 'next'
 import CredentialsSignInForm from './credentials-signin-form'
 import { auth } from '@/auth'
 import { redirect } from 'next/navigation'
 
-const Page: NextPage = async () => {
+interface SignInPageProps {
+  searchParams: Promise<{ callbackUrl: string }>
+}
+
+const SignInPage = async (props: SignInPageProps) => {
+  const { callbackUrl } = await props.searchParams
+
   const session = await auth()
 
   if (session) {
-    return redirect('/')
+    return redirect(callbackUrl || '/')
   }
 
   return (
@@ -19,4 +24,4 @@ const Page: NextPage = async () => {
   )
 }
 
-export default Page
+export default SignInPage
