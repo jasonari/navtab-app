@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { signOutUser } from '@/lib/actions/user.action'
 
-const UserButton = ({ user }: { user: { name: string } }) => {
+const UserButton = ({ user }: { user: any }) => {
   const router = useRouter()
 
   if (!user) {
