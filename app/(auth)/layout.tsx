@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SignInLayout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen flex-col bg-[url('/bg.jpg')] bg-cover bg-no-repeat">
       <main>{children}</main>
@@ -8,4 +8,4 @@ const SignInLayout = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-export default SignInLayout
+export default Layout
