@@ -12,7 +12,8 @@
     "prettier:check": "prettier --check .",
     "postinstall": "prisma generate",
     "prepare": "husky install",
-    "update:changelog": "pnpm exec tsx scripts/update-changelog.ts"
+    "update:changelog": "pnpm exec tsx scripts/update-changelog.ts",
+    "update:version": "pnpm exec tsx scripts/update-version.ts"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.9.1",
