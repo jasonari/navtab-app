@@ -1,4 +1,7 @@
-// commitlint.config.mjs
+/**
+ * Commitlint config
+ * @type {import('@commitlint/types').UserConfig}
+ */
 export default {
   extends: ['@commitlint/config-conventional'],
   rules: {

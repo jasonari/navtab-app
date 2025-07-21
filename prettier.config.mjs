@@ -4,7 +4,6 @@
  * @see https://prettier.io/docs/options
  * @type {import("prettier").Config}
  */
-
 export default {
   printWidth: 80,
   tabWidth: 2,
