@@ -109,7 +109,7 @@ function main(): void {
 
     if (!hasTag) {
       console.log(
-        '🫠  No tag found. Please make sure the repository has first tag'
+        '🫠 No tags found. Please run script to init CHANGELOG.md first, then create first tag.'
       )
       process.exit(0)
     }
@@ -117,7 +117,7 @@ function main(): void {
     const bumpType = getVersionBumpType()
 
     if (!bumpType) {
-      console.log('🫠  No new commits or version bump required. Skipping...')
+      console.log('🫠 No new commits or version bump required. Skipping...')
       process.exit(0)
     }
 

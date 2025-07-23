@@ -238,6 +238,11 @@ function main(): void {
     }
 
     const lastTag = getLastTag()
+
+    if (!lastTag) {
+      console.log('⚠️ No tags found. Creating initial changelog...\n')
+    }
+
     compareVersion(version, lastTag)
 
     const versionInfo = getVersionInfo(version, lastTag)
