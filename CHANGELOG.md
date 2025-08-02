@@ -1,5 +1,11 @@
 ## Changelog
 
+### [0.2.0](https://github.com/jasonari/navtab-app/compare/v0.1.0...v0.2.0) (2025-08-02)
+
+#### Features
+
+- add auto-release for management
+
 ### 0.1.0 (2025-07-19)
 
 #### Features
